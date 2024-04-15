@@ -14,6 +14,16 @@ export type Customer = {
   name: string;
   email: string;
   image_url: string;
+  country_code: string;
+  phone_number: string;
+  street_address: string;
+  city: string;
+  state_province: string;
+  postal_code: string;
+  created_at: string;
+  created_by: string;
+  updated_at: string;
+  updated_by: string;
 };
 
 export type Invoice = {
@@ -60,9 +70,16 @@ export type CustomersTableType = {
   name: string;
   email: string;
   image_url: string;
-  total_invoices: number;
-  total_pending: number;
-  total_paid: number;
+  country_code: string;
+  phone_number: string;
+  street_address: string;
+  city: string;
+  state_province: string;
+  postal_code: string;
+  created_at: string;
+  created_by: string;
+  updated_at: string;
+  updated_by: string;
 };
 
 export type FormattedCustomersTable = {

@@ -96,7 +96,20 @@ async function seedCustomers(client) {
         id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
         email VARCHAR(255) NOT NULL,
-        image_url VARCHAR(255) NOT NULL
+        image_url VARCHAR(255) NOT NULL,
+        country_code VARCHAR(5),
+        phone_number VARCHAR(20),
+        street_address VARCHAR(255),
+        city VARCHAR(100),
+        state_province VARCHAR(100),
+        postal_code VARCHAR(20),
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        created_by UUID,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_by UUID,
+        
+        CONSTRAINT fk_created_by FOREIGN KEY (created_by) REFERENCES users(id),
+        CONSTRAINT fk_updated_by FOREIGN KEY (updated_by) REFERENCES users(id)
       );
     `;
 

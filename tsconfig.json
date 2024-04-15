@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "noImplicitAny": false, // Set this to true to enable strict type checking
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
